@@ -154,9 +154,11 @@ Select Lodz District Add Player
     Click Element    ${SELECTDISTRICTLODZ}
 Click On Submit New Player Button
     Click Button    ${NEWPLAYERSUBMITFORMBUTTON}
+    Sleep       5
 Click On Main Page Button
     Click Element    ${MAINPAGEHYPERLINK}
 Assert New Player Created
     Wait Until Element Is Visible    ${LASTCREATEDPLAYERHYPERLINKDASH}
     Element Text Should Be    ${LASTCREATEDPLAYERHYPERLINKDASH}     BRONEK BOMBA
+    Capture Page Screenshot    newplayersubmittedondash.png
     Capture Element Screenshot   ${LASTCREATEDPLAYERHYPERLINKDASH}      newplayersubmitted.png
